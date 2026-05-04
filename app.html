@@ -6,7 +6,7 @@
   <title>test</title>
 </head>
 <body>
-  <h1>Simple API Fetch</h1>
+  
   <button onclick="fetchData()">Fetch Data</button>
   <div id="output" class="data"></div>
 
@@ -15,7 +15,7 @@
       fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
         .then(res => res.json())
         .then(data => {
-          let html = ''
+          let html ;
           data.forEach(post => {
             html += `<div class="item"><h3>${post.title}</h3><p>${post.body}</p></div>`
           })
